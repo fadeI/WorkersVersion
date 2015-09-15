@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dalyWorkers = new System.Windows.Forms.TabControl();
             this.WokersUpdate = new System.Windows.Forms.TabPage();
             this.newPlace = new System.Windows.Forms.TabPage();
@@ -39,8 +40,14 @@
             this.LastName_text = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.salary_txt = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.hireDate = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.dalyWorkers.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // dalyWorkers
@@ -87,6 +94,10 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.hireDate);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.salary_txt);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.LastName_text);
@@ -149,6 +160,43 @@
             this.salary_txt.Size = new System.Drawing.Size(100, 20);
             this.salary_txt.TabIndex = 5;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(218, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Hire Date :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(218, 47);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(45, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Address";
+            // 
+            // hireDate
+            // 
+            this.hireDate.Checked = false;
+            this.hireDate.Location = new System.Drawing.Point(283, 17);
+            this.hireDate.Name = "hireDate";
+            this.hireDate.Size = new System.Drawing.Size(182, 20);
+            this.hireDate.TabIndex = 9;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(283, 50);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(98, 20);
+            this.textBox1.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,6 +208,7 @@
             this.dalyWorkers.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -177,6 +226,11 @@
         private System.Windows.Forms.Label firsname;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox salary_txt;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker hireDate;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
