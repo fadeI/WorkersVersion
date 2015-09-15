@@ -34,17 +34,18 @@
             this.newPlace = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.firsname = new System.Windows.Forms.Label();
-            this.LastName = new System.Windows.Forms.Label();
-            this.firstName_text = new System.Windows.Forms.TextBox();
-            this.LastName_text = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.salary_txt = new System.Windows.Forms.TextBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.hireDate = new System.Windows.Forms.DateTimePicker();
+            this.OK = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.hireDate = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.salary_txt = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.LastName_text = new System.Windows.Forms.TextBox();
+            this.firstName_text = new System.Windows.Forms.TextBox();
+            this.LastName = new System.Windows.Forms.Label();
+            this.firsname = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.dalyWorkers.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -94,6 +95,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.OK);
             this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.hireDate);
             this.tabPage1.Controls.Add(this.label4);
@@ -112,66 +114,30 @@
             this.tabPage1.Text = "Add Worker";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // firsname
+            // OK
             // 
-            this.firsname.AutoSize = true;
-            this.firsname.Location = new System.Drawing.Point(7, 17);
-            this.firsname.Name = "firsname";
-            this.firsname.Size = new System.Drawing.Size(63, 13);
-            this.firsname.TabIndex = 0;
-            this.firsname.Text = "First Name :";
+            this.OK.Location = new System.Drawing.Point(494, 78);
+            this.OK.Name = "OK";
+            this.OK.Size = new System.Drawing.Size(54, 23);
+            this.OK.TabIndex = 11;
+            this.OK.Text = "OK";
+            this.OK.UseVisualStyleBackColor = true;
+            this.OK.Click += new System.EventHandler(this.OK_Click);
             // 
-            // LastName
+            // textBox1
             // 
-            this.LastName.AutoSize = true;
-            this.LastName.Location = new System.Drawing.Point(6, 50);
-            this.LastName.Name = "LastName";
-            this.LastName.Size = new System.Drawing.Size(64, 13);
-            this.LastName.TabIndex = 1;
-            this.LastName.Text = "Last Name :";
+            this.textBox1.Location = new System.Drawing.Point(283, 50);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(98, 20);
+            this.textBox1.TabIndex = 10;
             // 
-            // firstName_text
+            // hireDate
             // 
-            this.firstName_text.Location = new System.Drawing.Point(76, 14);
-            this.firstName_text.Name = "firstName_text";
-            this.firstName_text.Size = new System.Drawing.Size(100, 20);
-            this.firstName_text.TabIndex = 2;
-            // 
-            // LastName_text
-            // 
-            this.LastName_text.Location = new System.Drawing.Point(76, 47);
-            this.LastName_text.Name = "LastName_text";
-            this.LastName_text.Size = new System.Drawing.Size(100, 20);
-            this.LastName_text.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 80);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Salary :";
-            // 
-            // salary_txt
-            // 
-            this.salary_txt.Location = new System.Drawing.Point(76, 80);
-            this.salary_txt.Name = "salary_txt";
-            this.salary_txt.Size = new System.Drawing.Size(100, 20);
-            this.salary_txt.TabIndex = 5;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(218, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Hire Date :";
+            this.hireDate.Checked = false;
+            this.hireDate.Location = new System.Drawing.Point(283, 17);
+            this.hireDate.Name = "hireDate";
+            this.hireDate.Size = new System.Drawing.Size(182, 20);
+            this.hireDate.TabIndex = 9;
             // 
             // label4
             // 
@@ -182,20 +148,66 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Address";
             // 
-            // hireDate
+            // label1
             // 
-            this.hireDate.Checked = false;
-            this.hireDate.Location = new System.Drawing.Point(283, 17);
-            this.hireDate.Name = "hireDate";
-            this.hireDate.Size = new System.Drawing.Size(182, 20);
-            this.hireDate.TabIndex = 9;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(218, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Hire Date :";
             // 
-            // textBox1
+            // salary_txt
             // 
-            this.textBox1.Location = new System.Drawing.Point(283, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(98, 20);
-            this.textBox1.TabIndex = 10;
+            this.salary_txt.Location = new System.Drawing.Point(76, 80);
+            this.salary_txt.Name = "salary_txt";
+            this.salary_txt.Size = new System.Drawing.Size(100, 20);
+            this.salary_txt.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 80);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Salary :";
+            // 
+            // LastName_text
+            // 
+            this.LastName_text.Location = new System.Drawing.Point(76, 47);
+            this.LastName_text.Name = "LastName_text";
+            this.LastName_text.Size = new System.Drawing.Size(100, 20);
+            this.LastName_text.TabIndex = 3;
+            // 
+            // firstName_text
+            // 
+            this.firstName_text.Location = new System.Drawing.Point(76, 14);
+            this.firstName_text.Name = "firstName_text";
+            this.firstName_text.Size = new System.Drawing.Size(100, 20);
+            this.firstName_text.TabIndex = 2;
+            // 
+            // LastName
+            // 
+            this.LastName.AutoSize = true;
+            this.LastName.Location = new System.Drawing.Point(6, 50);
+            this.LastName.Name = "LastName";
+            this.LastName.Size = new System.Drawing.Size(64, 13);
+            this.LastName.TabIndex = 1;
+            this.LastName.Text = "Last Name :";
+            // 
+            // firsname
+            // 
+            this.firsname.AutoSize = true;
+            this.firsname.Location = new System.Drawing.Point(7, 17);
+            this.firsname.Name = "firsname";
+            this.firsname.Size = new System.Drawing.Size(63, 13);
+            this.firsname.TabIndex = 0;
+            this.firsname.Text = "First Name :";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Form1
             // 
@@ -231,6 +243,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker hireDate;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button OK;
     }
 }
 

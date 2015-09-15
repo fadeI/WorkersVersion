@@ -14,6 +14,7 @@ namespace WorkersVersion
     public partial class Form1 : Form ,ILogic
     {
         Regex r = new Regex("^[a-zA-Z0-9]*$");
+        private bool Validation_Parameter = true;
 
         public Form1()
         {
@@ -31,10 +32,12 @@ namespace WorkersVersion
         }
 
         public bool valdateText(TextBox item)
-        {  
+        {
+            
             if (String.IsNullOrEmpty(item.Text)){
 
                 errorProvider1.SetError(item, "Mandatory filed");
+                Validation_Parameter = false;
                 return false;
             }
             foreach(char c in item.Text)
@@ -43,6 +46,7 @@ namespace WorkersVersion
                 {
 
                     errorProvider1.SetError(item, "You must allow alphabet data");
+                    Validation_Parameter = false;
                     return false;
                 }
 
@@ -52,9 +56,46 @@ namespace WorkersVersion
 
         public bool validateNumric(TextBox item) 
         {
-            
+           
+            if (String.IsNullOrEmpty(item.Text))
+            {
+
+                errorProvider1.SetError(item, "Mandatory filed");
+                Validation_Parameter = false;
+                return false;
+            }
+            foreach (char c in item.Text)
+            {
+                if (char.IsLetter(c))
+                {
+
+                    errorProvider1.SetError(item, "You must allow Numric data");
+                    Validation_Parameter = false;
+                    return false;
+                }
+
+            }
+
 
             return true;
+        }
+
+        private void OK_Click(object sender, EventArgs e)
+        {
+            errorProvider1.Clear();
+            valdateText(firstName_text);
+            valdateText(LastName_text);
+            validateNumric(salary_txt);
+            
+            if (Validation_Parameter)
+            {
+
+                MessageBox.Show("the current date ", "Information");
+               
+
+            }
+            Validation_Parameter = true;
+            
         }
     }
 }
